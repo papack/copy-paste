@@ -1,10 +1,12 @@
-export const scale = (
-  value: number,
-  fromMin: number,
-  fromMax: number,
-  toMin: number,
-  toMax: number
-) => {
+import { ScaleProps } from "./interfaces";
+
+export const scale = ({
+  value,
+  fromMin,
+  fromMax,
+  toMin,
+  toMax,
+}: ScaleProps) => {
   //value must be between fromMin and fromMax
   if (value < fromMin || value > fromMax) {
     throw new Error(`value must be between ${fromMin} and ${fromMax}`);
