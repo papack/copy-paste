@@ -4,7 +4,7 @@
 
 ## useage
 
-```typescript
+```tsx
 import React from "react";
 
 import { useCounter } from "./useCounter";
