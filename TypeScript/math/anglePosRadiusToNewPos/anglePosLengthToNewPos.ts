@@ -6,6 +6,11 @@ export const anglePosLengthToNewPos = ({
   xFrom = 0,
   yFrom = 0,
 }: AnglePosLengthToNewPosProps) => {
+  // Check if length is positive
+  if (length <= 0) {
+    throw new Error("length must be greater than 0");
+  }
+
   //calculate radian
   const theta = ((90 - angle) * Math.PI) / 180;
 

@@ -1,10 +1,13 @@
 import { anglePosLengthToNewPos } from "./anglePosLengthToNewPos";
 
 describe("anglePosLengthToNewPos()", () => {
-  it("({ angle: 0, length: 0, xFrom: 0, yFrom: 0 }) should be { x: 0, y: 0 }", () => {
-    expect(
-      anglePosLengthToNewPos({ angle: 0, length: 0, xFrom: 0, yFrom: 0 })
-    ).toEqual({ x: 0, y: 0 });
+  it("length should not be negativ", () => {
+    expect(() => {
+      anglePosLengthToNewPos({
+        angle: 0,
+        length: -1,
+      });
+    }).toThrowError("length must be greater than 0");
   });
 
   it("({ angle: 0, length: 10, xFrom: 0, yFrom: 0 }) should be { x: 0, y: 10 }", () => {
