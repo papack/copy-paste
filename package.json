@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "framer-motion": "^6.3.3"
+  }
+}
