@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "../../layout";
-import { Path } from "../../styled";
+import { Path } from "../../elements";
 import { AngleElementProps } from "./AngleElementProps";
 
 export const AngleElement = ({

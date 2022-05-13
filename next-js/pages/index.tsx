@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Center } from "../src/layout";
-import { WaveElement } from "../src/geometry";
+import { Center } from "../src/ui/layout";
+import { WaveElement } from "../src/ui/geometry";
 
 const Home: NextPage = () => {
   return (

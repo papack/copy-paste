@@ -1,5 +1,5 @@
 import React from "react";
-import { Path } from "../../styled";
+import { Path } from "../../elements";
 import { Box } from "../../layout";
 import { WaveElementProps } from "./WaveElementProps";
 

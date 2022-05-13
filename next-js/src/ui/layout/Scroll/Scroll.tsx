@@ -1,5 +1,5 @@
 import React from "react";
-import { Absolute, Relative } from "../../layout";
+import { Absolute, Relative } from "..";
 import { ScrollProps } from "./ScrollProps";
 
 export const Scroll = (props: ScrollProps) => {

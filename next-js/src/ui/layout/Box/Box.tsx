@@ -1,6 +1,6 @@
 import React from "react";
 import { BoxProps } from "./BoxProps";
-import { Div } from "../../styled/Div/Div";
+import { Div } from "../../elements/Div/Div";
 import { AnimatePresence } from "framer-motion";
 
 export const Box = (props: BoxProps) => {
