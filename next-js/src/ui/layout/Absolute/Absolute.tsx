@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteProps } from "./AbsoluteProps";
-import { Box } from "../Box";
+import { Box } from "@ui";
 
 export const Absolute = (props: AbsoluteProps) => {
   const {
