@@ -1,0 +1,17 @@
+version: "3"
+
+networks:
+  default:
+    external:
+      name: build
+
+services:
+  registry:
+    hostname: your.host.local
+    container_name: registry
+    restart: always
+    image: registry:2
+    ports:
+      - 5000:5000
+    volumes:
+      - ./data/registry:/var/lib/registry

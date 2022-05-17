@@ -1,0 +1,33 @@
+version: "3"
+
+networks:
+  default:
+    external:
+      name: build
+
+services:
+  drone-server:
+    hostname: drone.your.host.local
+    container_name: drone
+    image: drone/drone:2.12
+    ports:
+      - 8001:80
+    volumes:
+      - ./data:/data
+    restart: always
+    env_file:
+      - ./config.env
+
+  drone-runner:
+    hostname: runner.your.host.local
+    container_name: runner
+    image: drone/drone-runner-docker:1.8
+    env_file:
+      - ./config.env
+    ports:
+      - 8002:3000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    depends_on:
+      - drone-server
